@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-	<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>
-			{% if title %}
-				{{ title }} - 
-			{% else %}
-				Welcome to my
-			{% endif %}
-			 Microblog</title>
-	</head>
-	<body>
-		<h1>Hello, {{ user.nickname }}!</h1>
-		{% for post in posts %}
-		<div>
-			<h3>{{ post.body }}</h3>
-			<p>by {{ post.author.nickname }}</p>
-		</div>
-		{% endfor %}
-	</body>
-	</html>	
+{% extends "base.html" %}
+{% block content %}
+	<h1>Hello, {{ user.nickname }}!</h1>
+	{% for post in posts %}
+	<div>
+		<h3>{{ post.body }}</h3>
+		<p>by {{ post.author.nickname }}</p>
+	</div>
+	{% endfor %}
+{% endblock %}

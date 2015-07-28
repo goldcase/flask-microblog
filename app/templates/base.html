@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% if title %}
+				{{ title }} - 
+			{% else %}
+				Welcome to my
+			{% endif %}
+			 Microblog</title>
+	</head>
+	<body>
+		<div>Microblog <a href="/index">Home</a></div>
+		<hr>
+		<!-- This is where derived templates can insert themselves. -->
+		{% block content %}
+		{% endblock %}
+	</body>
+</html>	
