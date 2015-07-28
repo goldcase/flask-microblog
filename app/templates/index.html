@@ -2,7 +2,13 @@
 	<html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>{{ title }} Microblog</title>
+		<title>
+			{% if title %}
+				{{ title }} - 
+			{% else %}
+				Welcome to my
+			{% endif %}
+			 Microblog</title>
 	</head>
 	<body>
 		<h1>Hello, {{ user.nickname }}!</h1>
